@@ -4,4 +4,8 @@
 *.toc
 *.pdf
 _build
+.DS_Store
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
