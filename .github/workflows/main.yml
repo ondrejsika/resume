@@ -9,12 +9,13 @@ jobs:
       - uses: ondrejsika/latex-build-github-action@master
         with:
           filename: ondrej_sika_resume.tex
+      - run: mkdir -p pdf && mv ondrej_sika_resume.pdf pdf/
       - uses: ondrejsika/latex-build-github-action@master
         with:
           filename: sika.work/ondrej_sika_resume.tex
-      - run: mkdir -p ondrej_sika_resume && mv ondrej_sika_resume.pdf ondrej_sika_resume/ && mv sika.work/ondrej_sika_resume.pdf ondrej_sika_resume/ondrej_sika_resume-sika_work.pdf
+      - run: mkdir -p pdf && mv ondrej_sika_resume.pdf pdf/sika_work_resume.pdf
       - uses: actions/upload-artifact@v1
         with:
-          name: resume
-          path: ondrej_sika_resume/
+          name: resumes
+          path: pdf/
 
